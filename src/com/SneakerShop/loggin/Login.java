@@ -9,5 +9,10 @@ package com.SneakerShop.loggin;
  * @author PC WHITE WOLF
  */
 public class Login {
+    public static void main(String[] args) {    
+   
+    FormLogin objetoLogin = new FormLogin();
+    objetoLogin.setVisible(true);
     
+    }
 }

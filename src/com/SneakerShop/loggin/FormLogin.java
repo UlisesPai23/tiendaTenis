@@ -15,6 +15,7 @@ public class FormLogin extends javax.swing.JFrame {
      */
     public FormLogin() {
         initComponents();
+        
     }
 
     /**
@@ -52,6 +53,11 @@ public class FormLogin extends javax.swing.JFrame {
         jLabel3.setText("Contraseña");
 
         jButton1.setText("Ingresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -111,6 +117,11 @@ public class FormLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        com.SneakerShop.ConectionDB.LoginDB objetoLogin= new com.SneakerShop.ConectionDB.LoginDB();
+        objetoLogin.validaUsuario(txtUsuario, txtContrasenia);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
